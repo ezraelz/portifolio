@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/porti.github.io/static/css/main.e185236c.css",
+    "main.js": "/porti.github.io/static/js/main.816c389a.js",
+    "static/js/453.59dd9bff.chunk.js": "/porti.github.io/static/js/453.59dd9bff.chunk.js",
+    "static/media/neon.webp": "/porti.github.io/static/media/neon.dd3dae38efd52c31feb5.webp",
+    "static/media/bgImage.webp": "/porti.github.io/static/media/bgImage.ccc36e39fe8e277e5dbc.webp",
+    "static/media/softlight.webp": "/porti.github.io/static/media/softlight.270eea7adce1f8b0e1e1.webp",
+    "static/media/web.jpg": "/porti.github.io/static/media/web.c931f66810d11fa208e0.jpg",
+    "static/media/darkmode.webp": "/porti.github.io/static/media/darkmode.ca61194540513458fe8b.webp",
+    "static/media/bgImage2.webp": "/porti.github.io/static/media/bgImage2.97c3507573dffaa12e62.webp",
+    "static/media/brightlight.webp": "/porti.github.io/static/media/brightlight.97c3507573dffaa12e62.webp",
+    "static/media/team_3.png": "/porti.github.io/static/media/team_3.a380838c10084e10abbd.png",
+    "static/media/uxui.webp": "/porti.github.io/static/media/uxui.dfb92f5492c4460197c8.webp",
+    "static/media/propic.jpg": "/porti.github.io/static/media/propic.bcb240bc038a1ce784c5.jpg",
+    "static/media/bg_3.jpg": "/porti.github.io/static/media/bg_3.4b1549ecb7f19e3b16c1.jpg",
+    "static/media/consultin.jpg": "/porti.github.io/static/media/consultin.837a048e3812aef5387b.jpg",
+    "index.html": "/porti.github.io/index.html",
+    "main.e185236c.css.map": "/porti.github.io/static/css/main.e185236c.css.map",
+    "main.816c389a.js.map": "/porti.github.io/static/js/main.816c389a.js.map",
+    "453.59dd9bff.chunk.js.map": "/porti.github.io/static/js/453.59dd9bff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e185236c.css",
+    "static/js/main.816c389a.js"
+  ]
+}
