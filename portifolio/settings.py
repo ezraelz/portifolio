@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-sg4tz4it1zq%r36v2sb+d^%f5gr=d6@8nq1y6091+qm8w0%q^6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ezraelz.github.io', 'portifolio-awlj.onrender.com']
 
 # Application definition
 
@@ -101,6 +101,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5174",
     "http://127.0.0.1:5173",
     "http://127.0.0.1:5174",
+    'https://ezraelz.github.io',
+    'https://portifolio-awlj.onrender.com',
 ]
 
 CORS_ALLOW_METHODS = [
