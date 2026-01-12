@@ -23,6 +23,7 @@ djangorestframework_simplejwt==5.5.1
 filelock==3.20.0
 fonttools==4.60.1
 fsspec==2025.10.0
+gunicorn>=21.2.0
 hyperlink==21.0.0
 idna==3.11
 incremental==24.7.2
