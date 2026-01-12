@@ -12,8 +12,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from pathlib import Path
 import dj_database_url
-from datetime import timedelta
 from corsheaders.defaults import default_headers
+from datetime import timedelta
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,11 +29,7 @@ SECRET_KEY = 'django-insecure-sg4tz4it1zq%r36v2sb+d^%f5gr=d6@8nq1y6091+qm8w0%q^6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'localhost'
-]
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Application definition
 
@@ -50,9 +47,8 @@ INSTALLED_APPS = [
     'home',
     'authApp',
     'rest_framework',
-    'corsheaders',
-    'rest_framework.authtoken',
     'rest_framework_simplejwt',
+    'corsheaders',
 ]
 
 ASGI_APPLICATION = "portifolio.asgi.application"
@@ -63,12 +59,31 @@ CHANNEL_LAYERS = {
     },
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',  # For JWT
+        'rest_framework.authentication.TokenAuthentication',          # For DRF token
+    ],
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.SearchFilter',
+        'rest_framework.filters.OrderingFilter',
+        ]
+}
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(hours=12),   # default is 5 minutes
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=7),    # default is 1 day
+    "ROTATE_REFRESH_TOKENS": True,                  # new refresh token on each refresh
+    "BLACKLIST_AFTER_ROTATION": True,               # old tokens are blacklisted
+}
+
 CORS_ALLOW_HEADERS = list(default_headers) + [
     'authorization',
 ]
 
 AUTH_USER_MODEL = 'authApp.User'
-LOGOUT_REDIRECT_URL = 'login'  # where to go after logout  
+LOGOUT_REDIRECT_URL = 'login' 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -97,32 +112,8 @@ CORS_ALLOW_METHODS = [
     "OPTIONS",
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',  # For JWT
-        'rest_framework.authentication.TokenAuthentication',          # For DRF token
-    ],
-    'DEFAULT_FILTER_BACKENDS': [
-        'django_filters.rest_framework.DjangoFilterBackend',
-        'rest_framework.filters.SearchFilter',
-        'rest_framework.filters.OrderingFilter',
-        ]
-}
-
-SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=1),   # default is 5 minutes
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=7),    # default is 1 day
-    "ROTATE_REFRESH_TOKENS": True,                  # new refresh token on each refresh
-    "BLACKLIST_AFTER_ROTATION": True,               # old tokens are blacklisted
-}
-
 CORS_ALLOW_CREDENTIALS = True
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-    'http://localhost:3000',  # URL of your React app
-    'https://ezraelz.github.io'
-]
 ROOT_URLCONF = 'portifolio.urls'
 
 TEMPLATES = [
