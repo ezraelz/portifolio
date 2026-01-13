@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # my app
     'home',
     'authApp',
+    'analytics',
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
