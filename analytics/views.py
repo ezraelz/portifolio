@@ -1,7 +1,9 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import PageView
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
 @api_view(['POST'])
 def track_view(request):
     page = request.data.get('page')
