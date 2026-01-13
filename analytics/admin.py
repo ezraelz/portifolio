@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import PageView
 
-# Register your models here.
+@admin.register(PageView)
+class PageViewAdmin(admin.ModelAdmin):
+    list_display = [
+        "page", "ip_address", "user_agent", "created_at"
+    ]
+
