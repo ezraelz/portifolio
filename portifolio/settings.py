@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'home',
     'authApp',
     'analytics',
+    'reactions',
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',

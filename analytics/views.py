@@ -22,3 +22,4 @@ def track_view(request):
 def total_views(request):
     count = PageView.objects.count()
     return Response({"total_views": count})
+
